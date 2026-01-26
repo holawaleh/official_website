@@ -1,79 +1,52 @@
+import { Code2, Github, Linkedin, Twitter } from "lucide-react";
+
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
-  const footerSections = [
-    {
-      title: 'Tech Affairs',
-      content: (
-        <p className="text-brand-200 leading-relaxed">
-          Complete technology solutions from software to hardware. Building the future, one project at a time.
-        </p>
-      )
-    },
-    {
-      title: 'Quick Links',
-      links: [
-        { text: 'Home', href: '#home' },
-        { text: 'Services', href: '#services' },
-        { text: 'Projects', href: '#projects' },
-        { text: 'About', href: '#about' },
-        { text: 'Contact', href: '#contact' }
-      ]
-    },
-    {
-      title: 'Services',
-      links: [
-        { text: 'Software Development', href: '#services' },
-        { text: 'Hardware Repairs', href: '#services' },
-        { text: 'IoT Solutions', href: '#services' },
-        { text: 'Training & Consulting', href: '#services' }
-      ]
-    },
-    {
-      title: 'Connect',
-      links: [
-        { text: 'LinkedIn', href: '#' },
-        { text: 'GitHub', href: '#' },
-        { text: 'Twitter', href: '#' }
-      ]
-    }
-  ]
-
   return (
-    <footer className="bg-brand-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h3 className="text-brand-300 font-semibold text-lg mb-4">
-                {section.title}
-              </h3>
-              {section.content ? (
-                section.content
-              ) : (
-                <ul className="space-y-2">
-                  {section.links?.map((link, i) => (
-                    <li key={i}>
-                      <a 
-                        href={link.href}
-                        target={link.href.startsWith('http') ? '_blank' : undefined}
-                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="text-brand-200 hover:text-brand-300 transition-colors"
-                      >
-                        {link.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
+    <footer className="bg-secondary text-secondary-foreground py-12 border-t border-white/10">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+                <Code2 className="text-primary" />
+                <span className="font-heading font-bold text-xl">Tech<span className="text-primary">Affairs</span></span>
             </div>
-          ))}
+            <p className="text-secondary-foreground/70 max-w-sm">
+                Bridging the gap between software innovation and hardware precision. Your trusted partner for end-to-end technology solutions.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="font-bold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-secondary-foreground/70">
+                <li><a href="#" className="hover:text-primary transition-colors">Web Development</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Mobile Apps</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Hardware Repair</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">IoT Solutions</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-bold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-secondary-foreground/70">
+                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Portfolio</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+          </div>
         </div>
-
-        <div className="border-t border-brand-700 pt-8 text-center text-brand-300">
-          <p>&copy; {currentYear} Tech Affairs & Innovative Hub. All rights reserved.</p>
+        
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-secondary-foreground/50">
+                © 2026 Tech Affairs. All rights reserved.
+            </p>
+            <div className="flex gap-4">
+                <a href="#" className="text-secondary-foreground/50 hover:text-white transition-colors"><Github size={20} /></a>
+                <a href="#" className="text-secondary-foreground/50 hover:text-white transition-colors"><Linkedin size={20} /></a>
+                <a href="#" className="text-secondary-foreground/50 hover:text-white transition-colors"><Twitter size={20} /></a>
+            </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

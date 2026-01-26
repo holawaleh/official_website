@@ -1,173 +1,92 @@
-import { useState } from 'react'
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Cpu, Code2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const closeMenu = () => {
-    setMobileMenuOpen(false)
-  }
+  const navLinks = [
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "About", href: "#about" },
+  ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-6 lg:px-8 py-4">
-        {/* Logo */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12">
-            <img 
-              src="/src/assets/logo.png" 
-              alt="Tech Affairs Logo" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div>
-            <h1 className="text-xl md:text-2xl font-bold text-brand-600">
-              Tech Affairs
-            </h1>
-            <p className="text-xs md:text-sm text-gray-600">
-              & Innovative Hub
-            </p>
-          </div>
-        </div>
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border py-4"
+          : "bg-transparent py-6"
+      )}
+    >
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2 group">
+  <img 
+    src={logo} 
+    alt="Tech Affairs Logo" 
+    className="h-10 w-10 object-contain transition-transform group-hover:scale-105" 
+  />
+  <span className="font-heading font-bold text-xl tracking-tight text-foreground">
+    Tech<span className="text-primary">Affairs</span>
+  </span>
+</Link>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex gap-8">
-          <li>
-            <a 
-              href="#home" 
-              className="text-gray-800 font-medium hover:text-brand-600 transition-colors"
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
-              Home
+              {link.name}
             </a>
-          </li>
-          <li>
-            <a 
-              href="#services" 
-              className="text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#projects" 
-              className="text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#about" 
-              className="text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#contact" 
-              className="text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+          ))}
+          <Button size="sm" className="font-semibold shadow-lg shadow-primary/20">
+            Get Started
+          </Button>
+        </nav>
 
-        {/* CTA Button */}
-        <a 
-          href="#contact" 
-          className="hidden lg:block bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-all hover:-translate-y-0.5 hover:shadow-lg"
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden text-foreground p-2"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          Get Started
-        </a>
-
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="lg:hidden flex flex-col gap-1.5 p-2" 
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span 
-            className={`w-6 h-0.5 bg-gray-800 transition-all block ${
-              mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-            }`}
-          />
-          <span 
-            className={`w-6 h-0.5 bg-gray-800 transition-all block ${
-              mobileMenuOpen ? 'opacity-0' : ''
-            }`}
-          />
-          <span 
-            className={`w-6 h-0.5 bg-gray-800 transition-all block ${
-              mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-            }`}
-          />
+          {isOpen ? <X /> : <Menu />}
         </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      <div className={`lg:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col gap-4 px-6 py-4 bg-gray-50 border-t">
-          <li>
-            <a 
-              href="#home" 
-              onClick={closeMenu}
-              className="block text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#services" 
-              onClick={closeMenu}
-              className="block text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#projects" 
-              onClick={closeMenu}
-              className="block text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#about" 
-              onClick={closeMenu}
-              className="block text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#contact" 
-              onClick={closeMenu}
-              className="block text-gray-800 font-medium hover:text-brand-600 transition-colors"
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <a 
-              href="#contact" 
-              onClick={closeMenu}
-              className="block bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-brand-700 transition-colors"
-            >
-              Get Started
-            </a>
-          </li>
-        </ul>
       </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 animate-in slide-in-from-top-5">
+          <nav className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg font-medium text-foreground hover:text-primary"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button className="w-full mt-2">Get Started</Button>
+          </nav>
+        </div>
+      )}
     </header>
-  )
+  );
 }
