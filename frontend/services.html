@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Tech Affairs & Innovative Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="code"></i></div>
+                <span>Tech Affairs</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container py-100">
+        <header class="section-header">
+            <h1>Our Services</h1>
+            <p>We offer a comprehensive suite of technical services designed to solve complex problems and drive innovation.</p>
+        </header>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Software Development</h3>
+                    <p>Full-cycle development from concept to deployment.</p>
+                    <ul class="feature-list">
+                        <li>Custom Web Applications</li>
+                        <li>Mobile App Development</li>
+                        <li>API Integration</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Hardware Solutions</h3>
+                    <p>Professional repair and maintenance for your devices.</p>
+                    <ul class="feature-list">
+                        <li>Laptop & Desktop Repair</li>
+                        <li>Data Recovery</li>
+                        <li>Hardware Upgrades</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3>Training & Consulting</h3>
+                    <p>Empowering your team with technical skills.</p>
+                    <ul class="feature-list">
+                        <li>Corporate Tech Workshops</li>
+                        <li>1-on-1 Mentorship</li>
+                        <li>System Architecture</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Tech Affairs & Innovative Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+    <style>
+        .py-100 { padding: 100px 0; }
+        .feature-list { list-style: none; margin: 20px 0; }
+        .feature-list li { margin-bottom: 10px; position: relative; padding-left: 25px; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .w-full { width: 100%; display: block; text-align: center; }
+        .mt-20 { margin-top: 20px; }
+    </style>
+</body>
+</html>

@@ -1,28 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-
-    <title>Tech Affairs | Software & Hardware Solutions</title>
-    <meta name="description" content="End-to-end technology solutions: from custom software development to precision hardware repairs. The Tech Hero for your digital needs." />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Affairs & Innovative Hub | Software & Hardware Solutions</title>
+    <meta name="description" content="Professional software development, hardware solutions, and technical training.">
     
-    <meta property="og:title" content="Tech Affairs | Software & Hardware Solutions" />
-    <meta property="og:description" content="End-to-end technology solutions: from custom software development to precision hardware repairs." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@replit" />
-    <meta name="twitter:title" content="Tech Affairs | Software & Hardware Solutions" />
-    <meta name="twitter:description" content="End-to-end technology solutions: from custom software development to precision hardware repairs." />
-
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importing Outfit to replace TT Firs Neue (similar geometric sans) -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="code"></i></div>
+                <span>Tech Affairs</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
+            </ul>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="badge">Innovating Since 2020</div>
+            <h1>Where <span class="highlight">Software</span> Meets <span class="highlight">Hardware</span></h1>
+            <p>We provide comprehensive tech solutions for businesses and individuals. From custom code to circuit repairs, we handle the full spectrum of technology.</p>
+            <div class="hero-btns">
+                <a href="services.html" class="btn btn-primary btn-lg">Explore Services</a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">150+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">5+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">1 Year</div>
+                <div class="stat-label">Hardware Warranties</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <p>We combine deep technical knowledge with practical problem-solving across three core pillars.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="src/assets/service-software.png" alt="Software">
+                    </div>
+                    <div class="card-body">
+                        <div class="icon-box"><i data-lucide="code"></i></div>
+                        <h3>Software Solutions</h3>
+                        <p>Custom web applications, mobile apps, and enterprise software built with modern technologies.</p>
+                        <a href="services.html" class="link-more">View Details <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="src/assets/service-hardware.png" alt="Hardware">
+                    </div>
+                    <div class="card-body">
+                        <div class="icon-box"><i data-lucide="wrench"></i></div>
+                        <h3>Hardware Repair</h3>
+                        <p>Expert diagnostics and component-level repair for laptops, desktops, and industrial equipment.</p>
+                        <a href="services.html" class="link-more">View Details <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-img">
+                        <img src="src/assets/service-training.png" alt="Training">
+                    </div>
+                    <div class="card-body">
+                        <div class="icon-box"><i data-lucide="graduation-cap"></i></div>
+                        <h3>Technical Training</h3>
+                        <p>Hands-on workshops and mentorship programs to build the next generation of tech talent.</p>
+                        <a href="services.html" class="link-more">View Details <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to upgrade your tech?</h2>
+            <p>Whether you need a custom software solution, hardware repair, or professional training, we have the expertise to help you succeed.</p>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo"><i data-lucide="code"></i> <span>Tech Affairs</span></div>
+                <p>Bridging the gap between software innovation and hardware precision.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Software Development</a></li>
+                    <li><a href="services.html">Hardware Repair</a></li>
+                    <li><a href="services.html">Tech Training</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i data-lucide="mail"></i> hello@techaffairs.hub</p>
+                <p><i data-lucide="phone"></i> +1 (555) 123-4567</p>
+                <div class="socials">
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Affairs & Innovative Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
