@@ -1,23 +1,40 @@
 <template>
-  <div class="border rounded-lg p-6 hover:shadow-md transition bg-white">
-    <h3 class="text-lg font-semibold text-gray-900 mb-2">
+  <div class="border rounded-xl p-6 bg-white hover:shadow-md transition">
+    
+    <span class="inline-block text-xs font-semibold text-primary mb-3">
+      {{ category }}
+    </span>
+
+    <h3 class="text-lg font-semibold text-gray-900 mb-3">
       {{ title }}
     </h3>
 
-    <p class="text-sm text-gray-600 mb-4">
-      {{ description }}
-    </p>
+    <div class="space-y-2 text-sm text-gray-600">
+      <p>
+        <strong class="text-gray-800">Problem:</strong>
+        {{ problem }}
+      </p>
 
-    <span class="inline-block text-xs font-medium text-primary">
-      {{ category }}
-    </span>
+      <p>
+        <strong class="text-gray-800">Solution:</strong>
+        {{ solution }}
+      </p>
+
+      <p>
+        <strong class="text-gray-800">Outcome:</strong>
+        {{ outcome }}
+      </p>
+    </div>
+
   </div>
 </template>
 
 <script setup>
 defineProps({
   title: String,
-  description: String,
-  category: String
+  category: String,
+  problem: String,
+  solution: String,
+  outcome: String
 })
 </script>

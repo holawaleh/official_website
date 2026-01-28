@@ -9,7 +9,9 @@
 
       <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
         From chip-level repairs to custom software development and IoT solutions,
-        we deliver reliable, scalable technology services for businesses and individuals.
+we design, build, and maintain reliable technology for individuals,
+businesses, and growing organizations.
+
       </p>
 
       <div class="flex justify-center gap-4">

@@ -25,9 +25,9 @@
       <!-- Contact -->
       <div>
         <h4 class="font-semibold text-white mb-3">Contact</h4>
-        <p class="text-sm">Ibadan, Nigeria</p>
+        <p class="text-sm">Ilorin, Nigeria</p>
         <p class="text-sm">techaffairsandinnovation@gmail.com</p>
-        <p class="text-sm">08059597963</p>
+        <p class="text-sm">+2348059597963</p>
       </div>
 
     </div>
