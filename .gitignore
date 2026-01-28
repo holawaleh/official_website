@@ -1,0 +1,15 @@
+# Virtual Environment
+**/mywebenv/
+venv/
+ENV/
+
+# Environment variables (Sensitive!)
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+Thumbs.db
