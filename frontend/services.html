@@ -1,94 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Tech Affairs & Innovative Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Contact Tech Affairs & Innovative Hub - Get in touch for software, hardware, and IoT solutions">
+    <title>Contact Us - Tech Affairs & Innovative Hub</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/logo.png">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon"><i data-lucide="code"></i></div>
-                <span>Tech Affairs</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <main class="container py-100">
-        <header class="section-header">
-            <h1>Our Services</h1>
-            <p>We offer a comprehensive suite of technical services designed to solve complex problems and drive innovation.</p>
-        </header>
+    <!-- Header Section -->
+    <div id="header-section"></div>
 
-        <div class="card-grid">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Software Development</h3>
-                    <p>Full-cycle development from concept to deployment.</p>
-                    <ul class="feature-list">
-                        <li>Custom Web Applications</li>
-                        <li>Mobile App Development</li>
-                        <li>API Integration</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
+    <!-- Contact Section -->
+    <section class="contact-page" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss how we can help bring your tech project to life</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 XXX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="software">Software Development</option>
+                                <option value="hardware">Hardware Solutions</option>
+                                <option value="training">Training & Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@techaffairs.com">info@techaffairs.com</a></p>
+                                <p><a href="mailto:support@techaffairs.com">support@techaffairs.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+234XXXXXXXXX">+234 XXX XXX XXXX</a></p>
+                                <p><a href="https://wa.me/234XXXXXXXXX" target="_blank">WhatsApp Available</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Ibadan, Oyo State</p>
+                                <p>Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9AM - 6PM</p>
+                                <p>Saturday: 10AM - 4PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" target="_blank" aria-label="LinkedIn">
+                                <span>in</span>
+                            </a>
+                            <a href="#" class="social-icon" target="_blank" aria-label="GitHub">
+                                <span>GH</span>
+                            </a>
+                            <a href="#" class="social-icon" target="_blank" aria-label="Twitter">
+                                <span>𝕏</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3>Hardware Solutions</h3>
-                    <p>Professional repair and maintenance for your devices.</p>
-                    <ul class="feature-list">
-                        <li>Laptop & Desktop Repair</li>
-                        <li>Data Recovery</li>
-                        <li>Hardware Upgrades</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3>Training & Consulting</h3>
-                    <p>Empowering your team with technical skills.</p>
-                    <ul class="feature-list">
-                        <li>Corporate Tech Workshops</li>
-                        <li>1-on-1 Mentorship</li>
-                        <li>System Architecture</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary w-full mt-20">Get Started</a>
-                </div>
-            </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Tech Affairs & Innovative Hub. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Footer Section -->
+    <div id="footer-section"></div>
 
-    <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
-    <style>
-        .py-100 { padding: 100px 0; }
-        .feature-list { list-style: none; margin: 20px 0; }
-        .feature-list li { margin-bottom: 10px; position: relative; padding-left: 25px; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
-        .w-full { width: 100%; display: block; text-align: center; }
-        .mt-20 { margin-top: 20px; }
-    </style>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
