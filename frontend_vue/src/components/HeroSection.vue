@@ -1,8 +1,8 @@
 <template>
-  <section class="bg-gray-50">
+  <section class="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 py-24 text-center">
       
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight animate-slideUp">
         Complete Technology Solutions  
         <span class="text-primary">Software, Hardware & Everything Between</span>
       </h1>
@@ -32,4 +32,4 @@ businesses, and growing organizations.
 
     </div>
   </section>
-</template>
+</template> i want the background color in bottle green 

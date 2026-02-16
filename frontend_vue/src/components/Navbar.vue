@@ -2,10 +2,12 @@
   <nav class="bg-white border-b">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       
-      <!-- Brand -->
-      <div class="text-xl font-bold text-primary">
-        Tech Affairs
-      </div>
+      <!-- logo and Brand -->
+      <div class="flex items-center gap-2 text-xl font-bold text-primary">
+      <img src="@/assets/logo.png" alt="Tech Affairs Logo" class="h-8 w-8" />
+      <span>Tech Affairs</span>
+       </div>
+
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex gap-6">
