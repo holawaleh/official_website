@@ -119,7 +119,7 @@
                 type="text"
                 name="name"
                 required
-                placeholder="John Doe"
+                placeholder="Ajagbe Olatunji"
                 class="w-full border border-gray-200 rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
               />
             </div>
@@ -138,7 +138,7 @@
                 type="email"
                 name="email"
                 required
-                placeholder="john@example.com"
+                placeholder="olatunji@example.com"
                 class="w-full border border-gray-200 rounded-xl pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
               />
             </div>
