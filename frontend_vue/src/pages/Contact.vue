@@ -251,7 +251,7 @@ const contactMethods = ref([
   {
     icon: '📍',
     title: 'Office',
-    details: '126 Ibrahim Taiwo Road, Ilorin, Nigeria',
+    details: '133 Ibrahim Taiwo Road, Ilorin, Nigeria',
     subtext: 'Visit us during business hours'
   }
 ])
